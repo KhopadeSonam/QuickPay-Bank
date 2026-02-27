@@ -12,7 +12,7 @@ This project is a full-stack banking authentication system with a React frontend
 
 ### 1. Database Setup
 1. Open your MySQL terminal/client.
-2. Run the commands in `database_setup.sql`:
+2. Run the commands in `backend/database_setup.sql`:
    ```sql
    CREATE DATABASE IF NOT EXISTS quickpay_db;
    ```
@@ -24,7 +24,6 @@ This project is a full-stack banking authentication system with a React frontend
    ```bash
    mvn spring-boot:run
    ```
-   The backend will start on `http://localhost:8080`.
 
 ### 3. Frontend Setup (React)
 1. Navigate to the `frontend` folder.
@@ -36,10 +35,10 @@ This project is a full-stack banking authentication system with a React frontend
    ```bash
    npm run dev
    ```
-   The frontend will start on `http://localhost:5173`.
 
 ## Features
 - **Registration**: Full form with validation (Email, Password Match, and Required fields).
 - **Security**: Password hashing using BCrypt.
 - **CORS**: Configured to allow requests from the React frontend.
 - **Professional UI**: Responsive design with a modern fintech aesthetic.
+- **Deployed Ready**: Configured for Render deployment.
