@@ -1,14 +1,4 @@
 services:
-  - type: web
-    name: quickpay-bank-backend
-    env: java
-    rootDir: backend
-    buildCommand: mvn clean install -DskipTests
-    startCommand: java -jar target/*.jar
-    envVars:
-      - key: JAVA_VERSION
-        value: 17
-
   - type: static
     name: quickpay-bank-frontend
     rootDir: frontend
