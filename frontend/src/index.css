@@ -1,0 +1,250 @@
+/* Base Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #F9FAFB;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+/* Layout Container */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+/* --- Left Section (40%) --- */
+.auth-sidebar {
+  width: 40%;
+  background: linear-gradient(to bottom, #2F5BEA, #9B5CF6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.brand-logo {
+  font-size: 42px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  font-size: 18px;
+  font-weight: 400;
+  color: #F3F4F6;
+  letter-spacing: 1px;
+}
+
+/* --- Right Section (60%) --- */
+.auth-content {
+  width: 60%;
+  background-color: #F9FAFB;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 650px;
+}
+
+/* Header Area */
+.header-area {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #6B7280;
+}
+
+/* Form Card Container */
+.form-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Input Fields */
+.input-field input,
+.input-field select {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #D1D5DB;
+  padding: 0 15px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #FFFFFF;
+}
+
+.input-field input:focus,
+.input-field select:focus {
+  border-color: #2F5BEA;
+  box-shadow: 0 0 0 3px rgba(47, 91, 234, 0.15);
+}
+
+.input-field input::placeholder {
+  color: #9CA3AF;
+}
+
+/* Checkbox Section */
+.checkbox-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.checkbox-section input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #2F5BEA;
+}
+
+/* Button Section */
+.button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: #2F5BEA;
+  color: #FFFFFF;
+  border-radius: 25px;
+  padding: 12px 28px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: auto;
+  min-width: 180px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1E40AF;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  background: #9CA3AF;
+  cursor: not-allowed;
+}
+
+.login-link {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #4B5563;
+}
+
+.login-link a {
+  color: #2F5BEA;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.error-message {
+  color: #DC2626;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.success-alert {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.error-alert {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* --- Responsive States --- */
+
+@media (max-width: 1024px) {
+  .auth-sidebar {
+    width: 35%;
+  }
+
+  .auth-content {
+    width: 65%;
+    padding: 40px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .auth-sidebar {
+    width: 100%;
+    padding: 60px 30px;
+  }
+
+  .auth-content {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: 30px 20px;
+  }
+
+  .button-section {
+    flex-direction: column;
+  }
+}

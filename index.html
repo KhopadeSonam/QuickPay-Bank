@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join QuickPay Bank today. Secure, simple, and smart banking for your future.">
+    <title>Create Account | QuickPay Bank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <!-- Left Section: Gradient Sidebar -->
+        <section class="auth-sidebar">
+            <div class="sidebar-content">
+                <h1 class="brand-logo">QuickPay Bank</h1>
+                <p class="tagline">Secure. Simple. Smart.</p>
+            </div>
+        </section>
+
+        <!-- Right Section: Form Content -->
+        <main class="auth-content">
+            <div class="content-wrapper">
+                <header class="header-area">
+                    <h2 class="title">Create an account</h2>
+                    <p class="subtitle">Create your account and manage your finances with ease.</p>
+                </header>
+
+                <div class="form-card">
+                    <form id="signup-form">
+                        <div class="form-grid">
+                            <div class="input-field">
+                                <input type="text" id="first-name" placeholder="First Name" required>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="last-name" placeholder="Last Name" required>
+                            </div>
+                            <div class="input-field">
+                                <input type="email" id="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="input-field">
+                                <input type="tel" id="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="country" placeholder="Country" required>
+                            </div>
+                            <div class="input-field">
+                                <select id="account-type" required>
+                                    <option value="" disabled selected>Select Account Type</option>
+                                    <option value="Savings">Savings Account</option>
+                                    <option value="Current">Current Account</option>
+                                    <option value="Business">Business Account</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" id="password" placeholder="Password" required>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                            </div>
+                        </div>
+
+                        <div id="message-container" class="message-container"></div>
+
+                        <div class="checkbox-section">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+                        </div>
+
+                        <div class="button-section">
+                            <button type="submit" id="signup-btn" class="btn-primary">Sign Up</button>
+                            <button type="button" class="btn-secondary">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="register.js"></script>
+</body>
+
+</html>
