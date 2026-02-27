@@ -8,3 +8,9 @@ services:
     envVars:
       - key: JAVA_VERSION
         value: 17
+
+  - type: static
+    name: quickpay-bank-frontend
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    publishDir: dist
