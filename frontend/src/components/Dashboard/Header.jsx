@@ -2,8 +2,7 @@ import React from 'react';
 import { Search, Bell, Mail } from 'lucide-react';
 
 const Header = () => {
-    const token = localStorage.getItem("token");
-    const user = token ? JSON.parse(atob(token.split('.')[1])) : null;
+    const user = JSON.parse(localStorage.getItem("user") || "null");
 
     return (
         <header className="dashboard-header">

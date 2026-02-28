@@ -21,6 +21,14 @@ const Login = () => {
         try {
             const response = await authService.login(credentials);
             localStorage.setItem("token", response.token);
+            localStorage.setItem(
+                "user",
+                JSON.stringify({
+                    firstName: response.firstName,
+                    lastName: response.lastName,
+                    email: response.email
+                })
+            );
             navigate("/dashboard");
         } catch (err) {
             setError(err.message || "Invalid credentials");
