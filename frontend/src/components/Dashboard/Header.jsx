@@ -2,10 +2,13 @@ import React from 'react';
 import { Search, Bell, Mail } from 'lucide-react';
 
 const Header = () => {
+    const token = localStorage.getItem("token");
+    const user = token ? JSON.parse(atob(token.split('.')[1])) : null;
+
     return (
         <header className="dashboard-header">
             <div className="welcome-text">
-                <h1>Welcome Back Sonam 👋</h1>
+                <h1>Welcome Back {user?.firstName || "User"} 👋</h1>
             </div>
 
             <div className="header-right">
@@ -18,7 +21,7 @@ const Header = () => {
 
                 <div className="profile-area">
                     <div className="profile-pic"></div>
-                    <span style={{ fontSize: '14px', fontWeight: '500' }}>Sonam Kapoor</span>
+                    <span style={{ fontSize: '14px', fontWeight: '500' }}>{user ? `${user.firstName} ${user.lastName}` : "User"}</span>
                 </div>
             </div>
         </header>
